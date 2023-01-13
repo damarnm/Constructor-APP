@@ -40,6 +40,17 @@ class Structure
             if (!is_dir($dir . '/utils')) {
                 mkdir($dir . '/utils', 0777, true);
             }
+            $menuContent = '
+            <?php
+            function menu($page){
+                return "";
+            }
+            ?>';
+            $file_name = $dir . '/utils/menu.php';
+            $file = fopen($file_name, 'w');
+            fwrite($file, $menuContent);
+            fclose($file);
+
             if (!is_dir($dir . '/functions')) {
                 mkdir($dir . '/functions', 0777, true);
             }

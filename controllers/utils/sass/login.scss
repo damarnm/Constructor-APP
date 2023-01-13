@@ -1,0 +1,111 @@
+@import "colors";
+@import "const";
+
+body {
+    background-color: $color-black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    padding: .5em;
+}
+
+
+.main {
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+    height: 100%;
+    width: 100%;
+    margin-left: .5em;
+    background-color: $color-dark;
+    border-radius: 10px;
+    padding: 1em;
+    overflow: auto;
+
+    .main__container {
+        .main__container__form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .main__container__form__title {
+                margin-top: 2em;
+                color: $color-white;
+                text-align: center;
+
+                .blue {
+                    color: $color-blue;
+                    margin-top: 1em;
+                }
+            }
+
+            form {
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                max-width: 200px;
+                margin-top: 1em;
+
+                .form__group {
+                    position: relative;
+                    display: inline-block;
+                    width: 100%;
+
+
+                    #password {
+                        padding-right: 2.5em;
+                        border: none;
+                        border-radius: 5px;
+                        padding: .5em;
+                        outline: none;
+                        display: inline-block;
+                        width: 100%;
+                        text-align: center;
+                    }
+
+                    .form__group__icon {
+                        display: inline-block;
+                        font-size: 2em;
+                        color: $color-white;
+                    }
+
+                    button {
+                        position: absolute;
+                        top: .3em;
+                        right: 0;
+                        border: none;
+                        border-radius: 5px;
+                        padding: .5em;
+                        outline: none;
+                        display: inline-block;
+                        width: 2.5em;
+                        height: 2.5em;
+                        background-color: $color-blue;
+                        color: $color-white;
+                        cursor: pointer;
+                        transition: .3s;
+
+                        &:hover {
+                            background-color: $color-blue-hover;
+                        }
+
+                        &:active {
+                            background-color: $color-blue-active;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.error {
+    color: $color-red;
+    text-align: center;
+    margin-top: 1em;
+}
